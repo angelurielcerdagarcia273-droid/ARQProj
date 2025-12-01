@@ -1,0 +1,16 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+
+- script: |
+    echo "Mostrando archivos del proyecto:"
+    ls -la
+  displayName: "Listar archivos del repositorio"
+
+- script: echo "Pipeline ejecutado correctamente para proyecto HTML."
+  displayName: "Final del pipeline"
